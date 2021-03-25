@@ -628,3 +628,9 @@ Thu Mar 25 22:38:48 UTC 2021:
  tests:  9|3
 total_score: 35/70
 cf1f391
+Thu Mar 25 22:41:04 UTC 2021: 
+ list.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+ tests:  9|3
+total_score: 35/70
+96fb95d
