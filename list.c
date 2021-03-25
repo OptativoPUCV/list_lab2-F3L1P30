@@ -38,7 +38,7 @@ List * createList() {
 
 void * firstList(List * list) {
   Node *n = createNode(list->current);
-  list->current = list->head;
+  //list->current = list->head;
     return n;
 }
 
