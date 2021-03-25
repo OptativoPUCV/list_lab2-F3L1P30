@@ -27,7 +27,7 @@ Node * createNode( void * data) {
     new->next = NULL;
     return new;
 }
-
+//Ejercicio 1
 List * createList() {
      List *ll = (List*)malloc(sizeof(List));
      ll->current = NULL;
@@ -36,6 +36,7 @@ List * createList() {
      return ll;
 }
 
+//Ejercicio 2
 void * firstList(List * list) {
   
 
@@ -56,6 +57,7 @@ return list->current->data;
 
 }
 
+//Ejercicio 3
 void * lastList(List * list) {
     list->current = list->tail;
 
@@ -67,10 +69,12 @@ void * prevList(List * list) {
   if(list->current == NULL) return NULL;
   if(list->current->prev == NULL) return NULL;
   list->current = list->current->prev;
-    return list->current->data;
+  return list->current->data;
 }
 
+//Ejercicio 4
 void pushFront(List * list, const void * data) {
+
 }
 
 void pushBack(List * list, const void * data) {
