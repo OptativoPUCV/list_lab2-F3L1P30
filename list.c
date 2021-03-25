@@ -31,21 +31,19 @@ Node * createNode(const void * data) {
 List * createList() {
      List *ll = (List*)malloc(sizeof(List));
      ll->current = NULL;
-     ll->head = 0;
+     ll->head = NULL;
      ll->tail = NULL;
      return ll;
 }
 
 void * firstList(List * list) {
-   
-   //list->current->head
+
     return list->head;
 }
 
 void * nextList(List * list) {
 
-  *list->current = *list->current->next;
-    return list->current;
+ return NULL;
 }
 
 void * lastList(List * list) {
