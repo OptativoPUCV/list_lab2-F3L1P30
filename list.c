@@ -43,7 +43,7 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-Node *n = createNode(list->current->next);
+Node *n = createNode(list->current + 1);
 list->current = list->head;
  return n;
 }
