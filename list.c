@@ -43,13 +43,12 @@ void * firstList(List * list) {
 
   list -> current = list->head;
 
+  //printf("%d",)
   return nodo;
 }
 
 void * nextList(List * list) {
-Node *n = createNode(list->current->next);
-list->current = n;
-return n;
+  return NULL;
 }
 
 void * lastList(List * list) {
