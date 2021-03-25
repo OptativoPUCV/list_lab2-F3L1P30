@@ -74,7 +74,16 @@ void * prevList(List * list) {
 
 //Ejercicio 4
 void pushFront(List * list,  const void * data) {
+  Node *n;
   
+  n = (Node*) malloc(sizeof(Node));
+
+  n->data = data;
+  n->next = (void *) data;
+
+  list->head = n;
+
+
 }
 
 void pushBack(List * list, const void * data) {
