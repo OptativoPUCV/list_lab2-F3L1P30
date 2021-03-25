@@ -39,9 +39,9 @@ List * createList() {
 void * firstList(List * list) {
    
 //list = createList();
-printf("%p", list->head );
+ list->current = list->head;
 
-  return NULL;
+  return list->head;
 }
 
 void * nextList(List * list) {
