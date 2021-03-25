@@ -6,7 +6,7 @@
 typedef struct Node Node;
 
 struct Node {
-    void * data;
+    const void * data;
     Node * next;
     Node * prev;
 };
@@ -19,7 +19,7 @@ struct List {
 
 typedef List List;
 
-Node * createNode( void * data) {
+Node * createNode( const void * data) {
     Node * new = (Node *)malloc(sizeof(Node));
     assert(new != NULL);
     new->data = data;
@@ -42,7 +42,7 @@ void * firstList(List * list) {
 
   list->current = list->head;
 
-  return (list->current->data);
+  return (void*)(list->current->data);
 }
 
 void * nextList(List * list) {
@@ -53,7 +53,7 @@ if(list->current->next == NULL) return NULL;
 
 list->current = list->current->next;
 
-return list->current->data;
+return (void*)list->current->data;
 
 }
 
@@ -61,7 +61,7 @@ return list->current->data;
 void * lastList(List * list) {
     list->current = list->tail;
 
-    return list->current->data;
+    return (void*)list->current->data;
 }
 
 void * prevList(List * list) {
@@ -69,7 +69,7 @@ void * prevList(List * list) {
   if(list->current == NULL) return NULL;
   if(list->current->prev == NULL) return NULL;
   list->current = list->current->prev;
-  return list->current->data;
+  return (void*)list->current->data;
 }
 
 //Ejercicio 4
