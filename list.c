@@ -38,9 +38,10 @@ List * createList() {
 
 void * firstList(List * list) {
    
-list = createList();
+//list = createList();
+printf("%d",89);
 
-  return list->head;
+  return NULL;
 }
 
 void * nextList(List * list) {
