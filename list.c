@@ -44,7 +44,7 @@ void * firstList(List * list) {
   list -> current = list->head;
 
   //printf("%d",)
-  return nodo;
+  return list->head;
 }
 
 void * nextList(List * list) {
