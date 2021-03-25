@@ -50,9 +50,9 @@ void * firstList(List * list) {
 void * nextList(List * list) {
   Node *nodo = (Node *) malloc(sizeof(Node));
 
-  nodo -> data = list->head;
+  nodo -> data = list->current->next;
 
-  list -> current = list->head;
+  list -> current = list->current->next;
 
   //printf("%d",)
   return nodo;
