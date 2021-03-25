@@ -79,7 +79,7 @@ void pushFront(List * list,  const void * data) {
   n = (Node*) malloc(sizeof(Node));
 
   n->data = data;
-  n->next = (void *) data;
+  n->next = NULL;
 
   list->head = n;
   //list->tail = list->head;
