@@ -82,7 +82,7 @@ void pushFront(List * list,  const void * data) {
   n->next = (void *) data;
 
   list->head = n;
-  list->tail = list->head;
+  //list->tail = list->head;
   //list->current = list->tail->prev;
 }
 
