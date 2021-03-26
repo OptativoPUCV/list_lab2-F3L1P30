@@ -127,7 +127,7 @@ void * popCurrent(List * list) {
   free(n);
   
   
-  return n2;
+  return (void *)n2;
   
 }
 
