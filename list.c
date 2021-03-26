@@ -109,12 +109,14 @@ void * popCurrent(List * list) {
   Node *n = createNode(list->current);
 
   if(n->prev != NULL){
+    printf("ENTRO N PREV");
     n->prev->next = n->next;
   }else{
     list->head = n->next;
   }
 
   if(n->next != NULL)
+   printf("ENTRO n next");
     n->next->prev = n->prev;
 
 free(n);
