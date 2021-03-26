@@ -106,7 +106,7 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  if(list->current == NULL) printf("CESAD");
+  list->current = list->head;
   return NULL;
 }
 
