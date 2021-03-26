@@ -70,9 +70,9 @@ void * prevList(List * list) {
 //Ejercicio 4
 void pushFront(List * list,  const void * data) {
     Node *n = createNode(data);
-    list->head = n;
-    n->next = list->head;
     //list->head = n;
+    n->next = list->head;
+    list->head = n;
     list->tail = n;
   
 }
