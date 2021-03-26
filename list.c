@@ -111,6 +111,7 @@ void * popCurrent(List * list) {
   n->prev = list->current->prev;
   n->next = list->current->next;
 
+  Node *n2 = list->current;
  if(n->prev != NULL){
     n->prev->next = n->next;
   }else{
@@ -126,7 +127,7 @@ void * popCurrent(List * list) {
   free(n);
   
   
-  return NULL;
+  return n2;
   
 }
 
