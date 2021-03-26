@@ -72,7 +72,7 @@ void pushFront(List * list,  const void * data) {
 
   //if(list->current == NULL) printf("CESAR PROASO");
     Node *n = createNode(data);
-    list->head = n;
+    //list->head = n;
     n->next = list->head;
     list->head = n;
     list->tail = n;
