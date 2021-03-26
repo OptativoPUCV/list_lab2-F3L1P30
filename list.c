@@ -70,11 +70,7 @@ void * prevList(List * list) {
 //Ejercicio 4
 void pushFront(List * list,  const void * data) {
   Node *n = createNode(data);
-
-  
-  
-  
-  list->head = n;
+list->head = n;
 
 }
 
@@ -85,8 +81,8 @@ void pushBack(List * list, const void * data) {
 
 void pushCurrent(List * list, const void * data) {
  
-  
-  list->current->next = (void*) data;
+  Node *n = createNode(data);
+  list->current->next = n;
 }
 
 void * popFront(List * list) {
