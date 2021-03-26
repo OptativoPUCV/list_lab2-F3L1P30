@@ -108,11 +108,12 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   Node *n = createNode(list->current);
 
+  if(list->head == NULL) printf("LLENO");
   if(n->prev != NULL){
     printf("ENTRO N PREV");
     n->prev->next = n->next;
   }else{
-    //list->head = n->next;
+    list->head = n->next;
   }
 
   if(n->next != NULL){
