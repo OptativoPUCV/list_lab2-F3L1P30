@@ -113,7 +113,7 @@ void * popCurrent(List * list) {
   
   free(list->current);
 
-  return n;
+  return (void *)n;
 }
 
 void cleanList(List * list) {
