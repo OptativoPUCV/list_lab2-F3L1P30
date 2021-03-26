@@ -104,16 +104,16 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  Node *n = createNode(list->current);
+  //Node *n = createNode(list->current);
 
   if(list->current->prev != NULL) 
-    list->current->next = n->next;
+    list->current->prev = list->current->next;
   if(list->current->next != NULL)
-    list->current->prev = n->prev;
+    list->current->prev = list->current->prev;
   
   free(list->current);
 
-  return (void *)list;
+  return (void *)list->current;
 }
 
 void cleanList(List * list) {
