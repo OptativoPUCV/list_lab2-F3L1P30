@@ -106,17 +106,8 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  Node *n = createNode(list->current);
-
-    list->head = list->current;
-  if(list->current->prev != NULL) 
-    list->current->prev = n->next;
-  if(list->current->next != NULL)
-    list->current->prev = n->prev;
-  
-  free(n);
-
-  return (void*) list->current->data;
+  if(list->current == NULL) printf("CESAD");
+  return NULL;
 }
 
 void cleanList(List * list) {
