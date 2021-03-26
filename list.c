@@ -112,7 +112,7 @@ void * popCurrent(List * list) {
   n->prev = list->current->prev;
   n->next = list->current->next;
 
-  void * data = list->current;
+  void * data = (void *)list->current->data;
   
   if(n->prev != NULL){
     n->prev->next = n->next;
