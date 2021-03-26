@@ -70,12 +70,12 @@ void * prevList(List * list) {
 //Ejercicio 4
 void pushFront(List * list,  const void * data) {
 
-  if(list->current == NULL) printf("CESAR PROASO");
-    //Node *n = createNode(data);
-    //list->head = n;
+  //if(list->current == NULL) printf("CESAR PROASO");
+    Node *n = createNode(data);
+    list->head = n;
     //n->next = list->head;
-    //list->head = n;
-    //list->tail = n;
+    list->head = n;
+    list->tail = n;
   
 }
 
