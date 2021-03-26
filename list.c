@@ -108,10 +108,10 @@ void * popCurrent(List * list) {
 
   if(list->current->prev != NULL) 
     list->current->next = n->next;
-  if(n->next != NULL)
-    n->next->prev = n->prev;
+  if(list->current->next != NULL)
+    list->current->prev = n->prev;
   
-  free(n);
+  free(list->current);
 
   return (void *)list;
 }
