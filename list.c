@@ -106,9 +106,19 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  if(list->current != NULL) printf("WENA DAYLAN");
-  //(list->current = list->head;
-  return NULL;
+  Node *n = createNode(list->current);
+
+  if(n->prev != NULL){
+    n->prev->next = n->next;
+  }else{
+    list->head = n->next;
+  }
+
+  if(n->next != NULL)
+    n->next->prev = n->prev;
+
+
+  return n;
 }
 
 void cleanList(List * list) {
