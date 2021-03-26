@@ -104,7 +104,8 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  list->current = list->head;
+  list->current->prev = list->current->next;
+    free(list->current);
   return (void * ) list->current->data;
 }
 
