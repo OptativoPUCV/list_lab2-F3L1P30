@@ -39,28 +39,23 @@ List * createList() {
 //Ejercicio 2
 void * firstList(List * list) {
   
-
+  if(list == NULL ) return NULL;
   list->current = list->head;
-
   return (void*)(list->current->data);
 }
 
 void * nextList(List * list) {
 
-if(list->current == NULL) return NULL;
-
-if(list->current->next == NULL) return NULL;
-
-list->current = list->current->next;
-
-return (void*)list->current->data;
+  if(list->current == NULL) return NULL;
+  if(list->current->next == NULL) return NULL;
+  list->current = list->current->next;
+  return (void*)list->current->data;
 
 }
 
 //Ejercicio 3
 void * lastList(List * list) {
     list->current = list->tail;
-
     return (void*)list->current->data;
 }
 
