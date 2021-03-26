@@ -112,9 +112,9 @@ void * popCurrent(List * list) {
   if(list->current->next != NULL)
     list->current->prev = list->current->prev;
   
-  //free(list->current);
+  free(n);
 
-  return n;
+  return (void*) list->current->data;
 }
 
 void cleanList(List * list) {
