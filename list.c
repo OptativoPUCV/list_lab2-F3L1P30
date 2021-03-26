@@ -104,8 +104,9 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
+  Node *n = createNode(list->current);
   list->current->prev = list->current->next;
-    free(list->current);
+    free(n);
   return NULL;
 }
 
