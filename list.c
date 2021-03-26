@@ -82,6 +82,7 @@ void pushBack(List * list, const void * data) {
     pushCurrent(list,data);
 }
 
+//Ejercicio 5
 void pushCurrent(List * list, const void * data) {
  
   Node *n = createNode(data);
@@ -101,7 +102,11 @@ void * popBack(List * list) {
     return popCurrent(list);
 }
 
+//Ejercicio 6
 void * popCurrent(List * list) {
+    
+
+  free(list->current);
     return NULL;
 }
 
