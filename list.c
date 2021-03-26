@@ -106,7 +106,8 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  //list->current = list->head;
+  if(list->current != NULL) printf("WENA DAYLAN");
+  //(list->current = list->head;
   return NULL;
 }
 
