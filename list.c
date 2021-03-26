@@ -112,12 +112,11 @@ void * popCurrent(List * list) {
     printf("ENTRO N PREV");
     n->prev->next = n->next;
   }else{
-    list->head = n->next;
+    //list->head = n->next;
   }
 
   if(n->next != NULL){
-   printf("ENTRO n next");
-    n->next->prev = n->prev;
+   n->next->prev = n->prev;
   }
 
 free(n);
