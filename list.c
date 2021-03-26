@@ -125,7 +125,8 @@ void * popCurrent(List * list) {
   list->tail->next = NULL;
   free(n);
   
-  return (void*)list->current->data;
+  
+  return NULL;
   
 }
 
