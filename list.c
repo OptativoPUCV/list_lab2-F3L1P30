@@ -106,11 +106,11 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  Node *n = createNode(list->current);
+  Node *n = list->current;
   n->prev = list->current->prev;
   n->next = list->current->next;
   
-  if(n->prev != NULL){
+  if(list->current->prev != NULL){
     n->prev->next = n->next;
   }else{
     list->head = n->next;
