@@ -118,6 +118,7 @@ void * popCurrent(List * list) {
     // Verificar si el current se encuentra en head    
     if ( list -> current == list -> head )
         list -> head = list -> current -> next;
+         data = (void* )aux -> data;
     // Verificar si el current se encuentra en la cola de la lista    
     if ( list -> current -> next != NULL )
         list -> current -> next -> prev = list -> current -> prev;
@@ -129,7 +130,8 @@ void * popCurrent(List * list) {
 
     list->tail = list->tail->prev;
     list->tail->next = NULL;
-    data =(void*) list->head->next->next->data;
+    //list->current = 
+    //data =(void*) list->head->next->data;
     free(aux);
     return data;
 }
