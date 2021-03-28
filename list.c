@@ -107,27 +107,26 @@ void * popBack(List * list) {
 //Ejercicio 6
 void * popCurrent(List * list) {
   
-  
-  Node *curr = list->current;
-  Node  *last = curr->prev;
-  Node *next = curr -> next;
-  void *data = (void*) curr ->data;
+    void *data = (void* )list -> current -> data;
+    Node *aux = list->current;
+    
 
-  if(list->current == list->head){
-    list->current = next;
-    list->head->next = curr;
-    list->current->prev = NULL;
-  }else{
-    list->current = next;
-    if(next)
-      next->prev = last;
+    if ( data == NULL ) exit(EXIT_FAILURE);
 
-  }
   
-  free(curr);
+  
+    // Verificar si el current se encuentra en head    
+    if ( list -> current == list -> head )
+        list -> head = list -> current -> next;
+    // Verificar si el current se encuentra en la cola de la lista    
+    if ( list -> current -> next != NULL )
+        list -> current -> next -> prev = list -> current -> prev;
+    // Verificar si el current no de encuentra en head    
+    if ( list -> current -> prev != NULL )
+        list -> current -> prev -> next = list -> current -> next;
 
-  return (void*)data;
-  
+    free(aux);
+    return data;
 }
 
 void cleanList(List * list) {
