@@ -126,8 +126,9 @@ void * popCurrent(List * list) {
       next->prev = last;  
   }
 
-  list->head->next = list->head->next->next;
+ 
   list->head->next = list->head;
+   list->head->next = list->head->next->next;
   free(curr); // Luego de aislar este nodo, podemos eliminarlo.
   return (void*)data;
   
