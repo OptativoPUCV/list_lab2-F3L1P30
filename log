@@ -1631,3 +1631,11 @@ Sun Mar 28 01:12:04 UTC 2021:
  tests:  11|1
 total_score: 55/70
 ab10203
+Sun Mar 28 01:14:26 UTC 2021: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+free(): double free detected in tcache 2
+free(): double free detected in tcache 2
+ tests:  0|0
+free(): double free detected in tcache 2
+bab5983

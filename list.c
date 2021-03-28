@@ -123,6 +123,8 @@ void * popCurrent(List * list) {
     if (next) // Sin esto, "next" puede ser NULL (cola) y causar segfault.
       next->prev = last;  
   }
+
+  list->head->next = curr;
   free(curr); // Luego de aislar este nodo, podemos eliminarlo.
   return (void*)data;
   
