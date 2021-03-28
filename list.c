@@ -112,7 +112,7 @@ void * popCurrent(List * list) {
   Node *n = createNode(list->current);
   n->prev = list->current->prev;
   n->next = list->current->next;
-   void * data = (int *)n;
+   void * data = (int *)list->current->data;
   
   
   if(n->prev != NULL){
