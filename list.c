@@ -107,12 +107,12 @@ void * popBack(List * list) {
 //Ejercicio 6
 void * popCurrent(List * list) {
   
-   void * data = (int *)list->current->data;
+  
   
   Node *n = createNode(list->current);
   n->prev = list->current->prev;
   n->next = list->current->next;
-
+   void * data = (int *)n;
   
   
   if(n->prev != NULL){
