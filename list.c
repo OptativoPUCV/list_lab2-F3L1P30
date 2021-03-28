@@ -107,9 +107,9 @@ void * popBack(List * list) {
 //Ejercicio 6
 void * popCurrent(List * list) {
   
-    void *data = (void* )list -> current -> data;
-    Node *aux = list->current;
     
+    Node *aux = list->current;
+    void *data = (void* )aux -> data;
 
     if ( data == NULL ) exit(EXIT_FAILURE);
 
