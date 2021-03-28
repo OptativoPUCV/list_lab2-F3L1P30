@@ -106,31 +106,32 @@ void * popBack(List * list) {
 
 //Ejercicio 6
 void * popCurrent(List * list) {
-  if (!(list && list->head && list->current))
-    return NULL;
-  Node *curr = list->current;  // Nodo "actual", el que será eliminado.
-  Node *last = curr->prev;     // Nodo anterior al actual.
-  Node *next = curr->next;     // Nodo siguiente al actual.
-  void *data = (void *)curr->data;
+  void * data = (int *)list->current->data;
+  
+  Node *n = createNode(list->current);
+  n->prev = list->current->prev;
+  n->next = list->current->next;
 
-  // Verificamos que el actual sea la cabeza (aka head):
-  if (list->current == list->head) {
-    list->current = next;
-    list->head = next;          // Recuerda asignar la nueva cabeza y el nuevo nodo "actual"
-    list->current->prev = NULL; // Recuerda eliminar la cabeza anterior.
-  }
-  // Si no es la cabeza, entonces o es la cola, o es algo del medio.
-  else {
-    list->current = next;
-    if (next) // Sin esto, "next" puede ser NULL (cola) y causar segfault.
-      next->prev = last;  
+  
+  
+  if(n->prev != NULL){
+    n->prev->next = n->next;
+  }else{
+    list -> head = n -> next;
   }
 
- list->head->next = list->head->next->next;
-  list->head->next = list->head;
-   list->head->next = list->head->next->next;
-  free(curr); // Luego de aislar este nodo, podemos eliminarlo.
-  return (void*)data;
+  if(n->next != NULL){
+   n->next->prev = n->prev;
+  }
+
+  list->tail = list->tail->prev;
+  list->tail->next = NULL;
+  
+  //list->current = list->head;
+  free(n);
+  
+  
+  return (void *) data;
   
 }
 
