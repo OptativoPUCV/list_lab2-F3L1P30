@@ -109,18 +109,13 @@ void * popCurrent(List * list) {
   //Me falta copiar el list->current en otra variable
   void * data = (int *)list->current->data;
   
-  Node *n = createNode(list->head);
-  n->next = list->current;
-  //n->prev = list->current->prev;
-  //n->next = list->current->next;
-
- //while(n->next != list->current){
-   // n = n->next; 
- //}
-
+  Node *n = createNode(list->current);
   n->next = list->current->next;
+  n->prev = list->current->prev;
 
-  free(n);
+ list->current->prev = list->current->next;
+
+
   
   return (void *) data;
   
