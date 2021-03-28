@@ -109,27 +109,27 @@ void * popCurrent(List * list) {
   
   
   
-  Node *n = list->current;
+  //Node *n = list->current;
   //n->prev = list->current->prev;
   //n->next = list->current->next;
-  void * data = (void *)n;
+  void * data = (void *)list->current->data;
   
   
-  if(n->prev != NULL){
-    n->prev->next = n->next;
+  if(list->current -> prev != NULL){
+    list->current->prev->next = list->current->next;
   }else{
-    list -> head = n -> next;
+    list -> head = list-> current -> next;
   }
 
-  if(n->next != NULL){
-   n->next->prev = n->prev;
+  if(list->current->next != NULL){
+   list->current->next->prev = list->current->prev;
   }
 
   list->tail = list->tail->prev;
   list->tail->next = NULL;
   
   //list->current = list->head;
-  free(n);
+  //free(n);
   
   
   return (void *) data;
