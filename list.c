@@ -111,7 +111,7 @@ void * popCurrent(List * list) {
   Node *n = createNode(list->current);
   n->prev = list->current->prev;
   n->next = list->current->next;
-  void * data = (int *)n->data;
+  void * data = (int *)n->next;
   
   
   if(n->prev != NULL){
