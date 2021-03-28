@@ -120,7 +120,7 @@ void * popCurrent(List * list) {
 
   n->next = list->current->next;
 
-  free(list->current);
+  free(n);
   
   return (void *) data;
   
