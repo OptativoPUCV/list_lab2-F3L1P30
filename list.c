@@ -100,7 +100,7 @@ void * popFront(List * list) {
 }
 
 void * popBack(List * list) {
-    //list->current = list->tail;
+    list->current = list->tail;
     return popCurrent(list);
 }
 
