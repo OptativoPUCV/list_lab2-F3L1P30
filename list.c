@@ -70,7 +70,7 @@ void * prevList(List * list) {
 //Ejercicio 4
 void pushFront(List * list,  const void * data) {
 
-  //if(list->current == NULL) printf("CESAR PROASO");
+  
     Node *n = createNode(data);
     //list->head = n;
     n->next = list->head;
@@ -107,11 +107,6 @@ void * popBack(List * list) {
 //Ejercicio 6
 void * popCurrent(List * list) {
   
-  
-  
-  //Node *n = list->current;
-  //n->prev = list->current->prev;
-  //n->next = list->current->next;
   void * data = (void *)list->current->data;
   
   
@@ -132,10 +127,7 @@ void * popCurrent(List * list) {
   }
 
 
-  //list->tail = list->tail->prev;
-  //list->tail->next = NULL;
   
-  //list->current = list->head;
   free(list->current);
   
   
